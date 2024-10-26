@@ -39,5 +39,11 @@ class StringApplicationTests {
 		}
 	}
 
+	@Test
+	public void testStringWithNewLines()
+	{
+		assertEquals(14,Calculator.add("\n,1,4,9"));
+	}
+
 }
 
