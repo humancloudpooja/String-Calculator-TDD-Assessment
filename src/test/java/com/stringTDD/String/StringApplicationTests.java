@@ -45,5 +45,11 @@ class StringApplicationTests {
 		assertEquals(14,Calculator.add("\n,1,4,9"));
 	}
 
+	@Test
+	public void testAddingDigitWithComma()
+	{
+		assertEquals(20,Calculator.add("10,10"));
+	}
+
 }
 
