@@ -14,5 +14,11 @@ class StringApplicationTests {
 		assertEquals(0,Calculator.add(""));
 	}
 
-} src/test/java/com/stringTDD/String/StringApplicationTests.java
+	@Test
+	public void testOneNumber()
+	{
+		assertEquals(1,Calculator.add("1"));
+	}
+
+}
 
