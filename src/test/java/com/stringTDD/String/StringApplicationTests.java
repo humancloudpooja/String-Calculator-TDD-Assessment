@@ -39,11 +39,18 @@ class StringApplicationTests {
 		}
 	}
 
-	/*@Test
+	@Test
+	public void testHandleAnyAmountOfNumber()
+	{
+		assertEquals(55, Calculator.add("1,2,3,4,5,6,7,8,9,10"));
+	}
+
+	@Test
 	public void testStringWithNewLines()
 	{
-		assertEquals(14,Calculator.add("\n,1,4,9"));
-	}*/
+		assertEquals(20,Calculator.add("12\n3\n5"));
+	}
+
 
 	@Test
 	public void testAddingDigitWithComma()
