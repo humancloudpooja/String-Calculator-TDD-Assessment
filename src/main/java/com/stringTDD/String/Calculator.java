@@ -6,7 +6,7 @@ public class Calculator {
     {
         if(!text.equals(""))
         {
-            return 1;
+
             if(containsNegative(splitNumbers(text)))
             {
                 throw new IllegalArgumentException("Can Not Add Negative Number");
@@ -21,7 +21,23 @@ public class Calculator {
 
     public static String[] splitNumbers(String text)
     {
-        return text.split(",");
+
+        /*if(text.contains("\n"))
+        {
+            return text.split("\n");
+        }
+        else {
+            return text.split(",");
+        }*/
+
+        String delimiter = ",|\n"; // Default delimiters are comma and newline
+        if (text.startsWith("//")) {
+            // Custom delimiter format detected
+            int delimiterIndex = text.indexOf("\n");
+            delimiter = text.substring(2, delimiterIndex); // Extract custom delimiter
+            text = text.substring(delimiterIndex + 1); // Remove the delimiter line
+        }
+        return text.split(delimiter);
     }
     public static boolean containsNegative(String arr[])
     {

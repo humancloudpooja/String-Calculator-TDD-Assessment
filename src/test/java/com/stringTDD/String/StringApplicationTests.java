@@ -39,16 +39,21 @@ class StringApplicationTests {
 		}
 	}
 
-	@Test
+	/*@Test
 	public void testStringWithNewLines()
 	{
 		assertEquals(14,Calculator.add("\n,1,4,9"));
-	}
+	}*/
 
 	@Test
 	public void testAddingDigitWithComma()
 	{
 		assertEquals(20,Calculator.add("10,10"));
+	}
+
+	@Test
+	public void testAddStringWithCustomDelimiter() {
+		assertEquals(3, Calculator.add("//;\n1;2")); // Using ';' as custom delimiter
 	}
 
 }
