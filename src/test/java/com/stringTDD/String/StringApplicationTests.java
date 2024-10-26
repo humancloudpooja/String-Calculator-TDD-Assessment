@@ -26,5 +26,18 @@ class StringApplicationTests {
 		assertEquals(4,Calculator.add("1,3"));
 	}
 
+	@Test
+	public void testStringWithNegativeNumber()
+	{
+		try
+		{
+			Calculator.add("-1,-2");
+		}
+		catch (Exception e)
+		{
+			assertEquals(e.getMessage(),"Can Not Add Negative Number");
+		}
+	}
+
 }
 
